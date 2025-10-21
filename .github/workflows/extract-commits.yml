@@ -1,0 +1,13 @@
+name: Extract Commits
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # Daily at 1 AM UTC
+  workflow_dispatch:
+
+jobs:
+  extract:
+    uses: hfduran/canaicode-git-extractor/.github/workflows/extract-and-upload-reusable.yml@main
+    secrets:
+      upload_url: ${{ secrets.UPLOAD_ENDPOINT_URL }}
+      upload_key: ${{ secrets.UPLOAD_AUTH_KEY }}
