@@ -11,3 +11,4 @@ jobs:
     secrets:
       upload_url: ${{ secrets.UPLOAD_ENDPOINT_URL }}
       upload_key: ${{ secrets.UPLOAD_AUTH_KEY }}
+      user_id: ${{ secrets.USER_ID }}
